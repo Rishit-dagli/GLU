@@ -32,7 +32,7 @@ pip install glu-tf
 
 ## Developing glu-tf
 
-To install glu-tf, along with tools you need to develop and test, run the following in your virtualenv:
+To install `glu-tf`, along with tools you need to develop and test, run the following in your virtualenv:
 
 ```sh
 git clone https://github.com/Rishit-dagli/GLU.git
@@ -40,6 +40,19 @@ git clone https://github.com/Rishit-dagli/GLU.git
 
 cd GLU
 pip install -e .[dev]
+```
+
+## Usage
+
+In this section, I show a minimal example of using the SwiGLU activation function but you can use the other activations in  similar manner:
+
+```python
+import tensorflow as tf
+from glu_tf import SwiGLU
+
+model = tf.keras.Sequential()
+model.add(tf.keras.layers.Dense(units=10)
+model.add(SwiGLU(bias = False, dim=-1, name='swiglu'))
 ```
 
 ## Want to Contribute 🙋‍♂️?
