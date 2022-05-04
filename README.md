@@ -18,9 +18,9 @@ An easy-to-use library for GLU (Gated Linear Units) and GLU variants in TensorFl
 - **SwiGLU** introduced in the paper GLU Variants Improve Transformer [3]
 - **SeGLU**
 
-Gated Linear Units consist of the component-wise product of two linear projections, one of which is first passed through a sigmoid function. Variations on GLU are possible, using different nonlinear (or even linear) functions in place of sigmoid. In the GLU Variants Improve Transformer [3] paper,  in a fine-tuning scenario the new variants seem to produce better perplexities for the de-noising objective used in pre-training, as well as better results on many downstream language-understanding tasks. FUrthermore these do not have any apparent computational drawbacks.
-
 ![](media/glue_benchmark.PNG)
+
+Gated Linear Units consist of the component-wise product of two linear projections, one of which is first passed through a sigmoid function. Variations on GLU are possible, using different nonlinear (or even linear) functions in place of sigmoid. In the GLU Variants Improve Transformer [3] paper,  in a fine-tuning scenario the new variants seem to produce better perplexities for the de-noising objective used in pre-training, as well as better results on many downstream language-understanding tasks. Furthermore these do not have any apparent computational drawbacks.
 
 ## Installation
 
