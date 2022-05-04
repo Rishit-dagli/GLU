@@ -14,6 +14,7 @@ class GLU(tf.keras.layers.Layer):
         x = tf.multiply(out, gate)
         return x
 
+
 class GLUBilinear(tf.keras.layers.Layer):
     def __init__(self, bias=True, dim=-1, **kwargs):
         super(GLUBilinear, self).__init__(**kwargs)
@@ -25,6 +26,7 @@ class GLUBilinear(tf.keras.layers.Layer):
         out, gate = tf.split(x, num_split=2, axis=self.dim)
         x = tf.multiply(out, gate)
         return x
+
 
 class ReGLU(tf.keras.layer.Layer):
     def __init__(self, bias=True, dim=-1, **kwargs):
@@ -39,6 +41,7 @@ class ReGLU(tf.keras.layer.Layer):
         x = tf.multiply(out, gate)
         return x
 
+
 class GeGLU(tf.keras.layers.Layer):
     def __init__(self, bias=True, dim=-1, **kwargs):
         super(GeGLU, self).__init__(**kwargs)
@@ -52,18 +55,20 @@ class GeGLU(tf.keras.layers.Layer):
         x = tf.multiply(out, gate)
         return x
 
+
 class SwiGLU(tf.keras.layers.Layer):
     def __init__(self, bias=True, dim=-1, **kwargs):
         super(SwiGLU, self).__init__(**kwargs)
         self.bias = bias
         self.dim = dim
         self.dense = tf.keras.layers.Dense(2, use_bias=bias)
-    
+
     def call(self, x):
         out, gate = tf.split(x, num_split=2, axis=self.dim)
         gate = tf.keras.activations.swish(gate)
         x = tf.multiply(out, gate)
         return x
+
 
 class SeGLU(tf.keras.layers.Layer):
     def __init__(self, bias=True, dim=-1, **kwargs):
@@ -71,7 +76,7 @@ class SeGLU(tf.keras.layers.Layer):
         self.bias = bias
         self.dim = dim
         self.dense = tf.keras.layers.Dense(2, use_bias=bias)
-    
+
     def call(self, x):
         out, gate = tf.split(x, num_split=2, axis=self.dim)
         gate = tf.keras.activations.selu(gate)
