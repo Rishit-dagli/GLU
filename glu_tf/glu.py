@@ -15,9 +15,9 @@ class GLU(tf.keras.layers.Layer):
         return x
 
 
-class GLUBilinear(tf.keras.layers.Layer):
+class Bilinear(tf.keras.layers.Layer):
     def __init__(self, bias=True, dim=-1, **kwargs):
-        super(GLUBilinear, self).__init__(**kwargs)
+        super(Bilinear, self).__init__(**kwargs)
         self.bias = bias
         self.dim = dim
         self.dense = tf.keras.layers.Dense(2, use_bias=bias)
