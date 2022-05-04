@@ -1,0 +1,2 @@
+include LICENSE
+recursive-include glu_tf *.py
