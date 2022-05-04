@@ -28,7 +28,7 @@ class GLUBilinear(tf.keras.layers.Layer):
         return x
 
 
-class ReGLU(tf.keras.layer.Layer):
+class ReGLU(tf.keras.layers.Layer):
     def __init__(self, bias=True, dim=-1, **kwargs):
         super(ReGLU, self).__init__(**kwargs)
         self.bias = bias
