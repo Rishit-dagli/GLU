@@ -2,7 +2,7 @@
 
 ![PyPI](https://img.shields.io/pypi/v/GLU-tf)
 [![Lint Code Base](https://github.com/Rishit-dagli/GLU/actions/workflows/linter.yml/badge.svg)](https://github.com/Rishit-dagli/GLU/actions/workflows/linter.yml)
-[![Upload Python Package](https://github.com/Rishit-dagli/GLU/actions/workflows/python-publish.yml/badge.svg?branch=v0.1.0)](https://github.com/Rishit-dagli/GLU/actions/workflows/python-publish.yml)
+[![Upload Python Package](https://github.com/Rishit-dagli/GLU/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Rishit-dagli/GLU/actions/workflows/python-publish.yml)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 [![GitHub stars](https://img.shields.io/github/stars/Rishit-dagli/GLU?style=social)](https://github.com/Rishit-dagli/GLU/stargazers)
